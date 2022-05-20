@@ -1,0 +1,11 @@
+<br><br><br><br>
+<h1>Your Watch List</h1>
+
+<ul class="list-group">
+  <% @lists.each do |list| %>
+  <li class="list-group-item bg-warning"><%= link_to list.name, list_path(list) %> </li>
+  <% end %>
+</ul>
+<h2></h2>
+
+<%= link_to "Create a new list", new_list_path %>
